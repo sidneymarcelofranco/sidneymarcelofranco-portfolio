@@ -2,9 +2,15 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { FiArrowDownCircle } from 'react-icons/fi';
 import useThemeSwitcher from '../../hooks/useThemeSwitcher';
+import { useState, useEffect } from 'react';
 
 function AppBanner() {
 	const [activeTheme] = useThemeSwitcher();
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
 	return (
 		<motion.section
@@ -68,9 +74,9 @@ function AppBanner() {
 				className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
 			>
 				<img
-					layout="responsive"
+					className="w-full h-auto"
 					src={
-						activeTheme === 'dark'
+						!mounted || activeTheme === 'dark'
 							? '/images/developer.svg'
 							: '/images/developer-dark.svg'
 					}

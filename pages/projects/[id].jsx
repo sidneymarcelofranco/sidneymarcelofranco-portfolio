@@ -37,12 +37,11 @@ function ProjectSingle(props) {
 						<div className="mb-10 sm:mb-0" key={project.id}>
 							<Image
 								src={project.img}
-								className="rounded-xl cursor-pointer shadow-lg sm:shadow-none"
+								className="rounded-xl cursor-pointer shadow-lg sm:shadow-none w-full h-auto"
 								alt={project.title}
 								key={project.id}
-								layout="responsive"
-								width={100}
-								height={90}
+								width={600}
+								height={400}
 							/>
 						</div>
 					);

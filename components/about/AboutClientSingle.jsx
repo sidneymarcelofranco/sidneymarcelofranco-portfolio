@@ -6,9 +6,9 @@ function AboutClientSingle({ title, image }) {
 			<Image
 				src={image}
 				alt={title}
-				layout="responsive"
-				width={100}
-				height={50}
+				className="w-full h-auto"
+				width={200}
+				height={100}
 			/>
 		</div>
 	);

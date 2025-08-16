@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -12,6 +12,11 @@ function AppHeader() {
 	const [showMenu, setShowMenu] = useState(false);
 	const [showModal, setShowModal] = useState(false);
 	const [activeTheme, setTheme] = useThemeSwitcher();
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -23,14 +28,18 @@ function AppHeader() {
 
 	function showHireMeModal() {
 		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
+			if (typeof document !== 'undefined') {
+				document
+					.getElementsByTagName('html')[0]
+					.classList.add('overflow-y-hidden');
+			}
 			setShowModal(true);
 		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
+			if (typeof document !== 'undefined') {
+				document
+					.getElementsByTagName('html')[0]
+					.classList.remove('overflow-y-hidden');
+			}
 			setShowModal(false);
 		}
 	}
@@ -48,7 +57,7 @@ function AppHeader() {
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
 						<Link href="/">
-							{activeTheme === 'dark' ? (
+							{!mounted || activeTheme === 'dark' ? (
 								<Image
 									src={logoDark}
 									className="w-36 cursor-pointer"
@@ -60,7 +69,7 @@ function AppHeader() {
 								<Image
 									src={logoLight}
 									className="w-36 cursor-pointer"
-									alt="Dark Logo"
+									alt="Light Logo"
 									width={150}
 									height={120}
 								/>
@@ -74,7 +83,7 @@ function AppHeader() {
 						aria-label="Theme Switcher"
 						className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
-						{activeTheme === 'dark' ? (
+						{!mounted || activeTheme === 'dark' ? (
 							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
@@ -179,7 +188,7 @@ function AppHeader() {
 						aria-label="Theme Switcher"
 						className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
 					>
-						{activeTheme === 'dark' ? (
+						{!mounted || activeTheme === 'dark' ? (
 							<FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
 						) : (
 							<FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
