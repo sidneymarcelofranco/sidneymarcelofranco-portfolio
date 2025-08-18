@@ -4,17 +4,10 @@ A simple portfolio starter theme built with Next.js, React and Tailwind CSS. Thi
 
 ![UI Portfolio Index](public/images/UI-Portfolio-Index.png)
 
-![React-TailwindCSS-Portfolio](https://user-images.githubusercontent.com/16396664/146666086-28e88beb-c2f0-431f-adfb-2396d8f64c80.png)
 
 ## Demo URL
 
-[https://nextjs-tailwindcss-portfolio.vercel.app](https://nextjs-tailwindcss-portfolio.vercel.app)
-
-## Other versions of this project
-
--   React Version: [https://github.com/realstoman/react-tailwindcss-portfolio](https://github.com/realstoman/react-tailwindcss-portfolio)
--   Vue.js Version: [https://github.com/realstoman/vuejs-tailwindcss-portfolio](https://github.com/realstoman/vuejs-tailwindcss-portfolio)
--   Nuxt.js Version: [https://github.com/realstoman/nuxtjs-tailwindcss-portfolio](https://github.com/realstoman/nuxtjs-tailwindcss-portfolio)
+[https://nextjs-tailwindcss-portfolio.vercel.app](https://sidneymarcelofranco.vercel.app/)
 
 ## Features
 
@@ -50,7 +43,7 @@ brew install node
 2. Clone the repo:
 
 ```
-git clone https://github.com/realstoman/nextjs-tailwindcss-portfolio.git
+git clone https://github.com/sidneymarcelofranco/sidneymarcelofranco-portfolio.git
 ```
 
 3. Open the project folder:
@@ -75,7 +68,7 @@ npm run dev
 
 -   Always run `npm install` after pulling new changes
 -   I'll be constantly updating this repo as I'll be adding more sections to it, so please always check the projects section of this repo to see what tasks are under todo and in progress
--   Coming Soon [I'll be doing a screencast](https://www.youtube.com/realstoman). Soon I'll be uploading a video to my YouTube channel where I'll be going through the process of creating this portoflio
+-   Coming Soon [I'll be doing a screencast](https://www.youtube.com/sidneymfranco). Soon I'll be uploading a video to my YouTube channel where I'll be going through the process of creating this portoflio
 -   Illustrations from [unDraw](https://undraw.co) and [Freepik](https://freepik.com)
 -   Images from [Unsplash](https://unsplash.com)
 -   Feel free to use it as your own portfolio
@@ -83,4 +76,4 @@ npm run dev
 
 ### License
 
-[MIT](https://github.com/realstoman/nextjs-tailwindcss-portfolio/blob/main/LICENSE)
+[MIT](https://github.com/sidneymarcelofranco/sidneymarcelofranco-portfolio/blob/main/LICENSE)
